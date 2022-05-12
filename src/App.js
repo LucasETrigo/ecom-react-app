@@ -1,11 +1,17 @@
 import './App.css';
+import './test.css';
+import NavBar from './components/NavBar/NavBar'; 
 
+/* COMPONENTE PADRE */
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to NFTxHype</h1>
+      <NavBar />
     </div>
   );
 }
 
 export default App;
+
+
+
