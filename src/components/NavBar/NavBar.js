@@ -19,7 +19,6 @@ import AdbIcon from '@mui/icons-material/Adb';
 //const pages = ['Products', 'Pricing', 'Blog'];
 const pages = [
   {title: 'Home'},
-  {title: 'Discover'}, 
   {title: 'Common Collection'},
   {title: 'Rare Collection'},
   {title: 'OG Collection'}

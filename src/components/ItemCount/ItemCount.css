@@ -1,0 +1,21 @@
+.btnDiv {
+    width: 100%;
+}
+
+.plus-minus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus-minus span {
+    font-size: large;
+}
+
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10px;
+}
