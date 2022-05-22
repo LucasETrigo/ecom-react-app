@@ -6,6 +6,7 @@ import ItemCount from '../ItemCount/ItemCount';
 
 const CardItem = (props) => {
 
+
     return(
         <Card sx={{ maxWidth: 345 }} variant="outlined" className='card-style'>
             <CardContent>

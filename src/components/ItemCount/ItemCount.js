@@ -12,9 +12,13 @@ import React, { useState } from "react";
     }
 
     function handleSubstract() {
-        if (count > 0) {
+        if (count > initial) {
         setCount(count - 1);
         }
+    }
+
+    function onAdd(count) {
+        console.log(`Agregaste ${count} al carrito`);
     }
 
     return (
@@ -25,7 +29,7 @@ import React, { useState } from "react";
             <Button variant="contained" onClick={handleAdd}>+</Button>
         </div>
         <div className="add-to-cart">
-            <Button variant="contained">Add To Cart</Button>
+            <Button variant="contained" onClick={() => {onAdd(count)}}>Add To Cart</Button>
         </div>
         </div>
     );
