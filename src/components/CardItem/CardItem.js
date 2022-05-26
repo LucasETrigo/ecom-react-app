@@ -20,7 +20,7 @@ const CardItem = ({ title, image, price, stock, initial }) => {
                     <div className="card-info-data">
                         <p>{title}</p>
                         <span>$ {price}</span>
-                        <ItemCount stock={stock} initial={initial} />
+                        <ItemCount stock={stock} />
                     </div>
                 </div>
             </CardContent>
