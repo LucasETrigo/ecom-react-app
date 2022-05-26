@@ -2,8 +2,8 @@ import { Button } from "@mui/material";
 import React, { useState } from "react";
 import "./ItemCount.css";
 
-function ItemCount({ stock, initial, onAdd }) {
-    const [count, setCount] = useState(initial);
+function ItemCount({ stock, onAdd }) {
+    const [count, setCount] = useState(1);
 
     function handleAdd() {
         if (count < stock) {
@@ -12,7 +12,7 @@ function ItemCount({ stock, initial, onAdd }) {
     }
 
     function handleSubstract() {
-        if (count > initial) {
+        if (count > 1) {
             setCount(count - 1);
         }
     }
