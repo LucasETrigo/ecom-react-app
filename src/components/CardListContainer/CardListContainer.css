@@ -1,0 +1,7 @@
+.general-container {
+    position: relative;
+    top: 100px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+}

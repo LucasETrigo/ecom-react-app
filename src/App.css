@@ -7,3 +7,7 @@
 body {
     background-color: #1c0842;
 }
+
+.app {
+    min-height: 100%;
+}

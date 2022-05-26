@@ -2,6 +2,7 @@ import CardItem from "../CardItem/CardItem";
 import CardList from "../CardList/CardList";
 import { useState, useEffect } from "react";
 import { Container, Grid } from "@mui/material";
+import "./CardListContainer.css";
 
 const CardListContainer = () => {
     const [products, setProducts] = useState([]);
@@ -13,7 +14,7 @@ const CardListContainer = () => {
             image: "nft-1.svg",
             stock: 10,
             id: 1,
-            initial: 1
+            initial: 1,
         },
 
         {
@@ -22,7 +23,7 @@ const CardListContainer = () => {
             image: "666.svg",
             stock: 10,
             id: 2,
-            initial: 1
+            initial: 1,
         },
 
         {
@@ -31,7 +32,7 @@ const CardListContainer = () => {
             image: "037.svg",
             stock: 10,
             id: 3,
-            initial: 1
+            initial: 1,
         },
 
         {
@@ -40,7 +41,7 @@ const CardListContainer = () => {
             image: "133.svg",
             stock: 10,
             id: 4,
-            initial: 1
+            initial: 1,
         },
     ];
 

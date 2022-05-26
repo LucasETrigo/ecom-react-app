@@ -2,6 +2,7 @@ import "./App.css";
 import "./test.css";
 import NavBar from "./components/NavBar/NavBar";
 import CardListContainer from "./components/CardListContainer/CardListContainer";
+import CardDetailContainer from "./components/CardDetailContainer/CardDetailContainer";
 
 /* COMPONENTE PADRE */
 function App() {
@@ -11,6 +12,7 @@ function App() {
             <div className="contenedor-padre">
                 <CardListContainer />
             </div>
+            <CardDetailContainer />
         </div>
     );
 }
