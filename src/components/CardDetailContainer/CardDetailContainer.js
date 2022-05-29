@@ -2,8 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { producto1 } from "../../utils/productsMock";
 import CardDetail from "../CardDetail/CardDetail";
+import { useParams } from "react-router-dom";
 
 const CardDetailContainer = () => {
+
+    console.log('Parametros: ', useParams())  /* DEFINIR PARAMETROS EN RUTA PARA QUE FUNCIONE */
+    const { id } = useParams();
 
     const [product, setProduct] = useState({});
     const getItem = () => {

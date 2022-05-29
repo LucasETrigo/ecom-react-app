@@ -17,6 +17,7 @@ const CardList = ({ title, products }) => {
                                 price={price}
                                 image={image}
                                 stock={stock}
+                                id={id}
                             />
                         </Grid>
                     );

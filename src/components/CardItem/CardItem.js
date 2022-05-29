@@ -7,7 +7,14 @@ import ItemCount from "../ItemCount/ItemCount";
 // style
 import "./CardItem.css";
 
-const CardItem = ({ title, image, price, stock, initial }) => {
+import { Link } from "react-router-dom";
+
+const CardItem = ({ title, image, price, stock, id }) => {
+
+    function onAdd(count) {
+        console.log(`Agregaste ${count} al carrito`);
+    }
+
     return (
         <Card sx={{ minWidth: 275 }} className="card-item-container">
             <CardContent>

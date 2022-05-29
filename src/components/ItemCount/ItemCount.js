@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react";
+import CardItem from "../CardItem/CardItem";
 import "./ItemCount.css";
 
 function ItemCount({ stock, onAdd }) {
@@ -17,9 +18,6 @@ function ItemCount({ stock, onAdd }) {
         }
     }
 
-    function onAdd(count) {
-        console.log(`Agregaste ${count} al carrito`);
-    }
 
     return (
         <div className="btnDiv">

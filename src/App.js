@@ -1,18 +1,38 @@
 import "./App.css";
-import "./test.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-import CardListContainer from "./components/CardListContainer/CardListContainer";
 import CardDetailContainer from "./components/CardDetailContainer/CardDetailContainer";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Details from "./pages/Details";
+
 
 /* COMPONENTE PADRE */
 function App() {
     return (
         <div className="App">
-            <NavBar />
-            <div className="contenedor-padre">
-                <CardListContainer />
-            </div>
-            <CardDetailContainer />
+            
+            <BrowserRouter>
+                <NavBar />
+                <Routes>
+                    <Route exact path="/home" element={<Home />}></Route>
+                    <Route exact path="/contact" element={<Contact />}></Route>
+                    <Route exact path="/products/:id" element={<Details />}></Route>
+                </Routes>
+            </BrowserRouter>
+
+
+
+        {
+            /*
+                    <div className="contenedor-padre">
+                    <CardListContainer />
+                    </div>
+            */
+        }
+
+
+            {/*<CardDetailContainer /> */}
         </div>
     );
 }
