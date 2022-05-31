@@ -1,9 +1,10 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import CardItem from "../CardItem/CardItem";
 import "./ItemCount.css";
 
-function ItemCount({ stock, onAdd }) {
+function ItemCount({ stock, onAdd, id }) {
     const [count, setCount] = useState(1);
 
     function handleAdd() {
@@ -17,7 +18,6 @@ function ItemCount({ stock, onAdd }) {
             setCount(count - 1);
         }
     }
-
 
     return (
         <div className="btnDiv">
@@ -45,7 +45,7 @@ function ItemCount({ stock, onAdd }) {
                         onAdd(count);
                     }}
                 >
-                    Add To Cart
+                    <Link to={`/products/${id}`}>Add to cart</Link>
                 </Button>
             </div>
         </div>

@@ -2,3 +2,14 @@
     display: flex;
     justify-content: center;
 }
+
+.card-info-data p {
+    text-align: center;
+    font-size: 30px;
+}
+
+.card-info-data span {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+}

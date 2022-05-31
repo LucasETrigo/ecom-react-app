@@ -10,7 +10,6 @@ import "./CardItem.css";
 import { Link } from "react-router-dom";
 
 const CardItem = ({ title, image, price, stock, id }) => {
-
     function onAdd(count) {
         console.log(`Agregaste ${count} al carrito`);
     }

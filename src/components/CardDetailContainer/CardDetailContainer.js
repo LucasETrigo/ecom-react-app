@@ -29,8 +29,9 @@ const CardDetailContainer = () => {
 
     return (
         <>
-            <div>CardDetailContainer</div>
-            <CardDetail data={product}/>
+            <div>
+                <CardDetail data={product}/>
+            </div>
         </>
     );
 };
