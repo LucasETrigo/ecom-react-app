@@ -26,7 +26,7 @@ const CardItem = ({ title, image, price, stock, id }) => {
                     <div className="card-info-data">
                         <p>{title}</p>
                         <span>$ {price}</span>
-                        <ItemCount stock={stock} />
+                        <ItemCount stock={stock} onAdd={onAdd} />
                     </div>
                 </div>
             </CardContent>

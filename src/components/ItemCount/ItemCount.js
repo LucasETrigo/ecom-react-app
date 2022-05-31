@@ -45,7 +45,7 @@ function ItemCount({ stock, onAdd, id }) {
                         onAdd(count);
                     }}
                 >
-                    <Link to={`/products/${id}`}>Add to cart</Link>
+                    Add To Cart
                 </Button>
             </div>
         </div>

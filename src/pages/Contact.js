@@ -2,6 +2,10 @@ import React from "react";
 import "./Contact.css";
 
 const Contact = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
+
     return (
         <div className="background">
             <div class="container">
@@ -29,7 +33,7 @@ const Contact = () => {
                             </div>
                         </div>
                         <div class="screen-body-item">
-                            <div class="app-form">
+                            <div class="app-form" onSubmit={handleSubmit}>
                                 <div class="app-form-group">
                                     <input
                                         class="app-form-control"

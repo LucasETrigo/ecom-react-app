@@ -6,31 +6,28 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Details from "./pages/Details";
 
-
 /* COMPONENTE PADRE */
 function App() {
     return (
         <div className="App">
-            
             <BrowserRouter>
                 <NavBar />
                 <Routes>
                     <Route exact path="/home" element={<Home />}></Route>
                     <Route exact path="/contact" element={<Contact />}></Route>
-                    <Route exact path="/products/:id" element={<Details />}></Route>
+                    <Route
+                        exact
+                        path="/products/:id"
+                        element={<Details />}
+                    ></Route>
                 </Routes>
             </BrowserRouter>
 
-
-
-        {
-            /*
+            {/*
                     <div className="contenedor-padre">
                     <CardListContainer />
                     </div>
-            */
-        }
-
+            */}
 
             {/*<CardDetailContainer /> */}
         </div>

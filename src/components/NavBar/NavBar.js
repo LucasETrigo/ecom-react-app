@@ -11,7 +11,9 @@ const NavBar = () => {
         <AppBar position="static" className="header-primary">
             <Toolbar>
                 <div className="container-logo">
-                    <h1>NFTxHype</h1>
+                    <a>
+                        <Link to={"/home"}>NFTxHype</Link>
+                    </a>
                 </div>
                 <ul className="navbar">
                     <li>
