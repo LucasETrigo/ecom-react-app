@@ -1,6 +1,49 @@
 .detail-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 93.3vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "img titulo"
+        "img addcart";
 }
 
+.img-detail {
+    grid-area: img;
+}
+
+.title-detail {
+    position: relative;
+    grid-area: titulo;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "tit"
+        "prc";
+}
+.tit {
+    grid-area: tit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    top: 40px;
+}
+.prc {
+    grid-area: prc;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    top: 80px;
+}
+
+.count-detail {
+    grid-area: addcart;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 200px;
+}

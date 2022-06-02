@@ -1,14 +1,22 @@
 import React from "react";
-import './CardDetail.css';
+import "./CardDetail.css";
+import ItemCount from "../ItemCount/ItemCount";
 
-const CardDetail = ({data}) => {
-
+const CardDetail = ({ data }) => {
     //console.log("data desde card detail: ", data)
 
     return (
         <div className="detail-container">
-            <h2>{data.title}</h2>
-            <p>{data.price}</p>
+            <div className="img-detail">
+                <img src={`/${data.image}`} />
+            </div>
+            <div className="title-detail">
+                <h2 className="tit">{data.title}</h2>
+                <p className="prc">{data.price}</p>
+            </div>
+            <div className="count-detail">
+                <ItemCount />
+            </div>
         </div>
     );
 };
