@@ -12,6 +12,10 @@
 .img-detail {
     grid-area: img;
 }
+.img-detail img {
+    width: 100%;
+    height: 90%;
+}
 
 .title-detail {
     position: relative;
@@ -22,6 +26,8 @@
     grid-template-areas:
         "tit"
         "prc";
+    position: relative;
+    right: 100px;
 }
 .tit {
     grid-area: tit;
@@ -46,4 +52,5 @@
     align-items: center;
     position: relative;
     bottom: 200px;
+    right: 100px;
 }

@@ -33,7 +33,7 @@ const NavBar = () => {
                             variant="text"
                             className="navbar__btn"
                         >
-                            <Link to={"/products/:id"}>Item Details</Link>
+                            <Link to={"/home"}>Common NFT</Link>
                         </Button>
                     </li>
                     <li>
@@ -43,7 +43,7 @@ const NavBar = () => {
                             variant="text"
                             className="navbar__btn"
                         >
-                            <Link to={"/products/:id"}>Rare NFT</Link>
+                            <Link to={"/home"}>Rare NFT</Link>
                         </Button>
                     </li>
                     <li>

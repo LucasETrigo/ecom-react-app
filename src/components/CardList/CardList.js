@@ -28,22 +28,3 @@ const CardList = ({ title, products }) => {
 };
 
 export default CardList;
-
-/*
-const CardList = ({ products }) => {};
-
-export default CardList;
-
-
-const CardList = ({ products }) => {
-    return (
-        <>
-            {products.map((product) => {
-                return <CardItem product={product} />;
-            })}
-        </>
-    );
-};
-
-export default CardList;
-*/
