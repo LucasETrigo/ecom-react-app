@@ -11,33 +11,13 @@ const CardDetailContainer = () => {
 
     const [product, setProduct] = useState({});
 
-    /*
-    const getItem = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(producto1);
-            }, 2000);
-        });
-    };
-    */
-
     useEffect(() => {
-        console.log("producto filtrado por id: ", productFilter);
         setProduct(productFilter);
-    }, []);
+    }, [id]);
 
     const productFilter = productos.find((product) => {
         return product.id == id;
     });
-
-    /*
-    useEffect(() => {
-        getItem().then((res) => {
-            console.log("Respuesta getItem ", res);
-            setProduct(res);
-        });
-    }, []);
-    */
 
     return (
         <>

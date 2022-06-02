@@ -1,10 +1,16 @@
 import React from "react";
 import "./CardDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
+import productos from "../../utils/productsMock";
 
 const CardDetail = ({ data }) => {
     //console.log("data desde card detail: ", data)
 
+    function onAdd(count) {
+        console.log(`Agregaste ${count} al carrito`);
+    }
+
+    console.log("Stock: ", data.stock);
     return (
         <div className="detail-container">
             <div className="img-detail">
@@ -15,7 +21,7 @@ const CardDetail = ({ data }) => {
                 <p className="prc">{data.price}</p>
             </div>
             <div className="count-detail">
-                <ItemCount />
+                <ItemCount stock={data.stock} onAdd={onAdd} />
             </div>
         </div>
     );

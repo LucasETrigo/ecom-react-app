@@ -20,29 +20,29 @@ const productos = [
     },
 
     {
-        title: "037 Common",
-        price: "0.7 ETH",
+        title: "037 Rare",
+        price: "0.8 ETH",
         image: "037.svg",
-        stock: 10,
+        stock: 5,
         id: 3,
         initial: 1,
     },
 
     {
-        title: "133 Common",
-        price: "0.4 ETH",
+        title: "133 Rare",
+        price: "0.9 ETH",
         image: "133.svg",
-        stock: 10,
+        stock: 5,
         id: 4,
         initial: 1,
     },
 ];
 
 const producto1 = {
-    title: "221 Common",
-    price: "0.5 ETH",
+    title: "221 Rare",
+    price: "0.8 ETH",
     image: "nft-1.svg",
-    stock: 10,
+    stock: 5,
     id: 1,
     initial: 1,
 };
