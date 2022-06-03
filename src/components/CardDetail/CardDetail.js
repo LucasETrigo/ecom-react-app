@@ -4,8 +4,6 @@ import ItemCount from "../ItemCount/ItemCount";
 import productos from "../../utils/productsMock";
 
 const CardDetail = ({ data }) => {
-    //console.log("data desde card detail: ", data)
-
     function onAdd(count) {
         console.log(`Agregaste ${count} al carrito`);
     }

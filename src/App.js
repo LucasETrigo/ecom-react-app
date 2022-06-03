@@ -7,9 +7,12 @@ import Contact from "./pages/Contact";
 import Details from "./pages/Details";
 import ThemeProvider from "./context/ThemeContext";
 import { CartProvider } from "./context/CartContext";
+import UseTimeout from "./components/UseTimeout";
 
 /* COMPONENTE PADRE */
 function App() {
+    UseTimeout(() => console.log("timeout"), 1000);
+
     return (
         <div className="App">
             <CartProvider>

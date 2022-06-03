@@ -1,7 +1,5 @@
-import CardItem from "../CardItem/CardItem";
 import CardList from "../CardList/CardList";
 import { useState, useEffect } from "react";
-import { Container, Grid } from "@mui/material";
 import "./CardListContainer.css";
 import productos from "../../utils/productsMock";
 import { useParams } from "react-router-dom";
@@ -11,8 +9,6 @@ const CardListContainer = () => {
 
     const { idCategory } = useParams();
 
-    console.log("id catogory", idCategory);
-    console.log({ products });
     const getProducts = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {

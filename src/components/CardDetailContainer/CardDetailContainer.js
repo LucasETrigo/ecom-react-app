@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import productos, { producto1 } from "../../utils/productsMock";
+import productos from "../../utils/productsMock";
 import CardDetail from "../CardDetail/CardDetail";
 import { useParams } from "react-router-dom";
 import "./CardDetailContainer.css";
