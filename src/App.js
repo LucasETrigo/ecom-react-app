@@ -1,35 +1,51 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-import CardDetailContainer from "./components/CardDetailContainer/CardDetailContainer";
-import Home from "./pages/Home";
+import CommonNft from "./pages/CommonNft";
+import HomeBanner from "./pages/HomeBanner/HomeBanner";
 import Contact from "./pages/Contact";
 import Details from "./pages/Details";
+import ThemeProvider from "./context/ThemeContext";
+import { CartProvider } from "./context/CartContext";
 
 /* COMPONENTE PADRE */
 function App() {
     return (
         <div className="App">
-            <BrowserRouter>
-                <NavBar />
-                <Routes>
-                    <Route exact path="/home" element={<Home />}></Route>
-                    <Route exact path="/contact" element={<Contact />}></Route>
-                    <Route
-                        exact
-                        path="/products/:id"
-                        element={<Details />}
-                    ></Route>
-                </Routes>
-            </BrowserRouter>
-
-            {/*
-                    <div className="contenedor-padre">
-                    <CardListContainer />
-                    </div>
-            */}
-
-            {/*<CardDetailContainer /> */}
+            <CartProvider>
+                <ThemeProvider>
+                    <BrowserRouter>
+                        <NavBar />
+                        <Routes>
+                            <Route
+                                exact
+                                path="/"
+                                element={<HomeBanner />}
+                            ></Route>
+                            <Route
+                                exact
+                                path="/category"
+                                element={<CommonNft />}
+                            ></Route>
+                            <Route
+                                exact
+                                path="/category/:idCategory"
+                                element={<CommonNft />}
+                            ></Route>
+                            <Route
+                                exact
+                                path="/contact"
+                                element={<Contact />}
+                            ></Route>
+                            <Route
+                                exact
+                                path="/products/:id"
+                                element={<Details />}
+                            ></Route>
+                        </Routes>
+                    </BrowserRouter>
+                </ThemeProvider>
+            </CartProvider>
         </div>
     );
 }

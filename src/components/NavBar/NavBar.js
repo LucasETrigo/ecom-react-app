@@ -11,9 +11,7 @@ const NavBar = () => {
         <AppBar position="static" className="header-primary">
             <Toolbar>
                 <div className="container-logo">
-                    <a>
-                        <Link to={"/home"}>NFTxHype</Link>
-                    </a>
+                    <Link to={"/"}>NFTxHype</Link>
                 </div>
                 <ul className="navbar">
                     <li>
@@ -23,7 +21,7 @@ const NavBar = () => {
                             variant="text"
                             className="navbar__btn"
                         >
-                            <Link to={"/home"}>Home</Link>
+                            <Link to={"/"}>Home</Link>
                         </Button>
                     </li>
                     <li>
@@ -33,7 +31,7 @@ const NavBar = () => {
                             variant="text"
                             className="navbar__btn"
                         >
-                            <Link to={"/home"}>Common NFT</Link>
+                            <Link to={"/category"}>Categories</Link>
                         </Button>
                     </li>
                     <li>
@@ -43,7 +41,17 @@ const NavBar = () => {
                             variant="text"
                             className="navbar__btn"
                         >
-                            <Link to={"/home"}>Rare NFT</Link>
+                            <Link to={"/category/common"}>Common NFT</Link>
+                        </Button>
+                    </li>
+                    <li>
+                        <Button
+                            disableRipple
+                            style={{ backgroundColor: "transparent" }}
+                            variant="text"
+                            className="navbar__btn"
+                        >
+                            <Link to={"/category/rare"}>Rare NFT</Link>
                         </Button>
                     </li>
                     <li>

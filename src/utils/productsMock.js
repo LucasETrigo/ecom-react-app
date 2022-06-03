@@ -8,6 +8,7 @@ const productos = [
         stock: 10,
         id: 1,
         initial: 1,
+        category: "common",
     },
 
     {
@@ -17,6 +18,7 @@ const productos = [
         stock: 10,
         id: 2,
         initial: 1,
+        category: "common",
     },
 
     {
@@ -26,6 +28,7 @@ const productos = [
         stock: 5,
         id: 3,
         initial: 1,
+        category: "rare",
     },
 
     {
@@ -35,6 +38,7 @@ const productos = [
         stock: 5,
         id: 4,
         initial: 1,
+        category: "rare",
     },
 ];
 

@@ -1,0 +1,12 @@
+.video-container {
+    width: 100%;
+
+    @media (max-width: 64em) {
+        min-width: 40vh;
+    }
+}
+
+img {
+    width: 90%;
+    height: auto;
+}

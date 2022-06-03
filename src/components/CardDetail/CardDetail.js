@@ -10,11 +10,10 @@ const CardDetail = ({ data }) => {
         console.log(`Agregaste ${count} al carrito`);
     }
 
-    console.log("Stock: ", data.stock);
     return (
         <div className="detail-container">
             <div className="img-detail">
-                <img src={`/${data.image}`} />
+                <img src={`/${data.image}`} alt="NFT Picture" />
             </div>
             <div className="title-detail">
                 <h2 className="tit">{data.title}</h2>
