@@ -54,3 +54,8 @@
     bottom: 200px;
     right: 100px;
 }
+
+.checkout-btn {
+    position: relative;
+    left: 305px;
+}

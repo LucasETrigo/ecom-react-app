@@ -6,10 +6,12 @@ import { useParams } from "react-router-dom";
 
 const CardListContainer = () => {
     const [products, setProducts] = useState([]);
+    const [spinner, setSpinner] = useState(false);
 
     const { idCategory } = useParams();
 
     const getProducts = () => {
+        setSpinner(true);
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(productos);
@@ -20,6 +22,7 @@ const CardListContainer = () => {
     useEffect(() => {
         getProducts()
             .then((response) => {
+                setSpinner(false);
                 setProducts(
                     idCategory
                         ? response.filter(

@@ -5,6 +5,7 @@ import CommonNft from "./pages/CommonNft";
 import HomeBanner from "./pages/HomeBanner/HomeBanner";
 import Contact from "./pages/Contact";
 import Details from "./pages/Details";
+import Cart from "./pages/Cart";
 import ThemeProvider from "./context/ThemeContext";
 import { CartProvider } from "./context/CartContext";
 import UseTimeout from "./components/UseTimeout";
@@ -44,6 +45,11 @@ function App() {
                                 exact
                                 path="/products/:id"
                                 element={<Details />}
+                            ></Route>
+                            <Route
+                                exact
+                                path="/cart"
+                                element={<Cart />}
                             ></Route>
                         </Routes>
                     </BrowserRouter>
