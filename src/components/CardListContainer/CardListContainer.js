@@ -36,11 +36,32 @@ const CardListContainer = () => {
             });
     }, [idCategory]);
 
+
+    return (
+        <>
+            {
+                spinner
+
+                ?
+
+                <h1>Cargando...</h1>
+                
+                :
+
+                <div className="general-container">
+                    <CardList products={products} />
+                </div>
+
+            }
+        </>
+    )
+    /*
     return (
         <div className="general-container">
             <CardList products={products} />
         </div>
     );
+    */
 };
 
 export default CardListContainer;
