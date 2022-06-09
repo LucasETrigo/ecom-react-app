@@ -1,19 +1,23 @@
 import React, { useContext, useState } from "react";
-import "./CardDetail.css";
-import ItemCount from "../ItemCount/ItemCount";
-import productos from "../../utils/productsMock";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
+
+import ItemCount from "../ItemCount/ItemCount";
 import CartContext from "../../context/CartContext";
 
+import "./CardDetail.css";
+
+
 const CardDetail = ({ data, item }) => {
-    function onAdd(count) {
-        console.log(`Agregaste ${count} al carrito`);
-    }
 
     const [showButton, setShowButton] = useState(false);
-
     const { addItem } = useContext(CartContext);
+
+
+    function onAdd(count) {
+        addItem({ data, quantity: count })
+    }
+
 
     return (
         <div className="detail-container">
@@ -30,7 +34,7 @@ const CardDetail = ({ data, item }) => {
                         stock={data.stock}
                         setShowButton={setShowButton}
                         item={item}
-                        addItem={addItem}
+                        onAdd={onAdd}
                     />
                 ) : (
                     <Button variant="contained" className="checkout-btn">

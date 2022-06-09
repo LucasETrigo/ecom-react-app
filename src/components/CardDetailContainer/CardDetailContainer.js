@@ -20,11 +20,9 @@ const CardDetailContainer = () => {
     });
 
     return (
-        <>
             <div className="details-container">
                 <CardDetail data={product} />
             </div>
-        </>
     );
 };
 
