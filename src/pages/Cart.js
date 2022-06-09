@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../context/CartContext";
 
 const Cart = () => {
+    const { cartListItems, addItem } = useContext(CartContext);
+    console.log(cartListItems);
+
     return (
         <div>
-            <h1>CART PAGE</h1>
+            {cartListItems.map((item) => {
+                <div key={item.id}>
+                    <h1>{item.title}</h1>
+                </div>;
+            })}
         </div>
     );
 };

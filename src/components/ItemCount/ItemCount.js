@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import CardItem from "../CardItem/CardItem";
 import "./ItemCount.css";
 
-function ItemCount({ stock, onAdd, id, setShowButton }) {
+function ItemCount({ stock, setShowButton, addItem, item, qty }) {
     const [count, setCount] = useState(1);
 
     function handleAdd() {
@@ -42,8 +42,8 @@ function ItemCount({ stock, onAdd, id, setShowButton }) {
                 <Button
                     variant="contained"
                     onClick={() => {
-                        onAdd(count);
                         setShowButton(true);
+                        addItem({ item, qty });
                     }}
                 >
                     Add To Cart

@@ -1,5 +1,3 @@
-import React from "react";
-
 const productos = [
     {
         title: "221 Common",
@@ -20,7 +18,24 @@ const productos = [
         initial: 1,
         category: "common",
     },
-
+    {
+        title: "235 Rare",
+        price: "0.5 ETH",
+        image: "235.svg",
+        stock: 10,
+        id: 5,
+        initial: 1,
+        category: "common",
+    },
+    {
+        title: "199 Rare",
+        price: "0.5 ETH",
+        image: "199.svg",
+        stock: 10,
+        id: 8,
+        initial: 1,
+        category: "common",
+    },
     {
         title: "037 Rare",
         price: "0.8 ETH",
@@ -37,6 +52,24 @@ const productos = [
         image: "133.svg",
         stock: 5,
         id: 4,
+        initial: 1,
+        category: "rare",
+    },
+    {
+        title: "923 Rare",
+        price: "0.9 ETH",
+        image: "923.svg",
+        stock: 5,
+        id: 6,
+        initial: 1,
+        category: "rare",
+    },
+    {
+        title: "828 Rare",
+        price: "0.8 ETH",
+        image: "828.svg",
+        stock: 5,
+        id: 7,
         initial: 1,
         category: "rare",
     },
