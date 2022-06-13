@@ -19,7 +19,7 @@ const productos = [
         category: "common",
     },
     {
-        title: "235 Rare",
+        title: "235 Common",
         price: "0.5 ETH",
         image: "235.svg",
         stock: 10,
@@ -28,7 +28,7 @@ const productos = [
         category: "common",
     },
     {
-        title: "199 Rare",
+        title: "199 Common",
         price: "0.5 ETH",
         image: "199.svg",
         stock: 10,

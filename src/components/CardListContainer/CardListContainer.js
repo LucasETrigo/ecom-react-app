@@ -1,14 +1,23 @@
-import CardList from "../CardList/CardList";
 import { useState, useEffect } from "react";
-import "./CardListContainer.css";
-import productos from "../../utils/productsMock";
 import { useParams } from "react-router-dom";
+
+import productos from "../../utils/productsMock";
+import CardList from "../CardList/CardList";
+import LinearProgress from '@mui/material/LinearProgress';
+import Box from '@mui/material/Box';
+
+import "./CardListContainer.css";
+
+//Firestore
+import { collection, getDocs } from "firebase/firestore";
+import db from '../../utils/firebaseConfig';
 
 const CardListContainer = () => {
     const [products, setProducts] = useState([]);
     const [spinner, setSpinner] = useState(false);
-
+//
     const { idCategory } = useParams();
+
 
     const getProducts = () => {
         setSpinner(true);
@@ -18,6 +27,7 @@ const CardListContainer = () => {
             }, 1000);
         });
     };
+    
 
     useEffect(() => {
         getProducts()
@@ -26,8 +36,8 @@ const CardListContainer = () => {
                 setProducts(
                     idCategory
                         ? response.filter(
-                              (item) => item.category === idCategory
-                          )
+                            (item) => item.category === idCategory
+                        )
                         : response
                 );
             })
@@ -44,7 +54,9 @@ const CardListContainer = () => {
 
                 ?
 
-                <h1>Cargando...</h1>
+                <Box sx={{ width: '100%' }}>
+                    <LinearProgress />
+                </Box>
                 
                 :
 
@@ -55,13 +67,6 @@ const CardListContainer = () => {
             }
         </>
     )
-    /*
-    return (
-        <div className="general-container">
-            <CardList products={products} />
-        </div>
-    );
-    */
 };
 
 export default CardListContainer;

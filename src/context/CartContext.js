@@ -8,24 +8,25 @@ const CartContext = createContext();
 const CartProvider = ({ children }) => {
 
     const [cartListItems, setCartListItems] = useState([]);
+    console.log('cartlistitem desde fueradel if: ',cartListItems)
 
     const isInCart = (id) => {
-        const found = cartListItems.find(item => item.id === id);
+        const found = cartListItems.find(item => item.data.id === id);
         return found;
     };
 
     const addItem = (item) => {
-        isInCart(item.id)
-            ?
+        if(isInCart(item.data.id)) {
             setCartListItems(cartListItems.map((prod) => {
-                if(prod.id === item.id) {
+                console.log('jsxghbd', prod);
+                if(prod.data.id === item.data.id) {
                     prod.quantity += item.quantity
                 }
                 return prod;
             }))
-            :
+        } else {
             setCartListItems([...cartListItems, item,]);
-        console.log(cartListItems);
+        }
     };
 
 

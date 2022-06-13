@@ -1,8 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 import productos from "../../utils/productsMock";
 import CardDetail from "../CardDetail/CardDetail";
-import { useParams } from "react-router-dom";
+
 import "./CardDetailContainer.css";
 
 const CardDetailContainer = () => {
@@ -11,13 +13,13 @@ const CardDetailContainer = () => {
 
     const [product, setProduct] = useState({});
 
-    useEffect(() => {
-        setProduct(productFilter);
-    }, [id]);
-
     const productFilter = productos.find((product) => {
         return product.id == id;
     });
+
+    useEffect(() => {
+        setProduct(productFilter);
+    }, [id]);
 
     return (
             <div className="details-container">
