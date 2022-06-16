@@ -44,3 +44,4 @@ Esta es la lista de dependencias y las versiones utilizadas
 -   @mui/material": 5.7.0
 -   @mui/styled-engine-sc: 5.7.0
 -   react-router-dom@6.3.0
+-   firebase: 9.8.2
