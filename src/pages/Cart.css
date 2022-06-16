@@ -135,6 +135,10 @@ hr {
     position: relative;
     left: 50px;
 }
+.span-total-cart span {
+    font-size: 30px;
+}
+
 
 .btn-clear-cart {
     grid-area: clearB;
