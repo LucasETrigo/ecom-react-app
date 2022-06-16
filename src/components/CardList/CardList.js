@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
-import CardItem from "../CardItem/CardItem";
+//Libraries Imports
 import { Grid } from "@mui/material";
-import ItemCount from "../ItemCount/ItemCount";
-import CardListContainer from "../CardListContainer/CardListContainer";
+
+//Components Imports
+import CardItem from "../CardItem/CardItem";
+
+
 
 const CardList = ({ title, products }) => {
     return (

@@ -1,5 +1,10 @@
+//React imports
 import React from "react";
+
+//Styles Imports
 import "./Contact.css";
+
+
 
 const Contact = () => {
     const handleSubmit = (e) => {

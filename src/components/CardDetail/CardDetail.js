@@ -1,10 +1,15 @@
+//React Imports
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+
+//Libraries Imports
 import { Button } from "@mui/material";
 
+//Components Imports
 import ItemCount from "../ItemCount/ItemCount";
 import CartContext from "../../context/CartContext";
 
+//Styles Imports
 import "./CardDetail.css";
 
 

@@ -1,33 +1,40 @@
+//React Imports
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import productos from "../../utils/productsMock";
+//Firestore imports
+import { collection, getDocs } from "firebase/firestore";
+import db from '../../utils/firebaseConfig';
+
+//Components Imports
 import CardList from "../CardList/CardList";
+
+//Libraries Imports
 import LinearProgress from '@mui/material/LinearProgress';
 import Box from '@mui/material/Box';
 
+//Styles Imports
 import "./CardListContainer.css";
 
-//Firestore
-import { collection, getDocs } from "firebase/firestore";
-import db from '../../utils/firebaseConfig';
+
 
 const CardListContainer = () => {
     const [products, setProducts] = useState([]);
     const [spinner, setSpinner] = useState(false);
-//
     const { idCategory } = useParams();
 
 
-    const getProducts = () => {
+    const getProducts = async () => {
         setSpinner(true);
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos);
-            }, 1000);
-        });
-    };
-    
+        const productSnapshot = await getDocs(collection(db, "products"));
+        const productList = productSnapshot.docs.map((doc) => {
+            let product = doc.data()
+            product.id = doc.id
+            return product
+        })
+        return productList
+    }
+
 
     useEffect(() => {
         getProducts()
@@ -42,7 +49,7 @@ const CardListContainer = () => {
                 );
             })
             .catch((err) => {
-                console.log("Fallo.");
+                console.log("Failed to load.");
             });
     }, [idCategory]);
 
@@ -79,15 +86,4 @@ export default CardListContainer;
     import { collection, getDocs } from "firebase/firestore";
     import db from '../../utils/firebaseConfig';
 
-
-
-    const getProductoss = async () => {
-        const productSnapshot = await getDocs(collection(db, "products"));
-        const productList = productSnapshot.docs.map((doc) => {
-            let product = doc.data()
-            product.id = doc.id
-            return product
-        })
-        return productList
-    }
     */

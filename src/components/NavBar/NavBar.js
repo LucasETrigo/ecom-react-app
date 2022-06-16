@@ -1,10 +1,19 @@
+// React Imports
 import * as React from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.css";
-import CartWidget from "../CartWidget/CartWidget";
+
+//Libraries Imports
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
+
+//Components Imports
+import CartWidget from "../CartWidget/CartWidget";
+
+//Styles Imports
+import "./NavBar.css";
+
+
 
 const NavBar = () => {
     return (

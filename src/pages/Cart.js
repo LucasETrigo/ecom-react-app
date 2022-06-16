@@ -1,12 +1,14 @@
+//React Imports
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
-import { Add, Remove } from "@mui/icons-material";
-
+//Components Imports
 import CartContext from "../context/CartContext";
-import { CartProvider } from "../context/CartContext";
 
+//Styles Imports
 import "./Cart.css";
+
+
 
 const Cart = () => {
     const { cartListItems, addItem, removeItem, clearItems, getTotalPrice } = useContext(CartContext);

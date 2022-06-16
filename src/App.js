@@ -1,14 +1,23 @@
-import "./App.css";
+//React imports
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar";
+
+//Pages imports
 import CommonNft from "./pages/CommonNft";
 import HomeBanner from "./pages/HomeBanner/HomeBanner";
 import Contact from "./pages/Contact";
 import Details from "./pages/Details";
 import Cart from "./pages/Cart";
+
+//Context imports
 import ThemeProvider from "./context/ThemeContext";
 import { CartProvider } from "./context/CartContext";
+
+//Components imports
 import UseTimeout from "./components/UseTimeout";
+import NavBar from "./components/NavBar/NavBar";
+
+//Styles imports
+import "./App.css";
 
 /* COMPONENTE PADRE */
 function App() {

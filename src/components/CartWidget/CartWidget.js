@@ -5,7 +5,9 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import CartContext from "../../context/CartContext";
 
+//Styles Imports
 import "./CartWidget.css";
+
 
 const CartWidget = () => {
     

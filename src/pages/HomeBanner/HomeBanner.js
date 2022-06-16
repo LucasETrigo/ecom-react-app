@@ -1,7 +1,14 @@
+//React Imports
 import React from "react";
 import { Link } from "react-router-dom";
+
+//Components Imports
 import CoverVideo from "./CoverVideo";
+
+//Styles Imports
 import "./HomeBanner.css";
+
+
 
 const HomeBanner = () => {
     return (

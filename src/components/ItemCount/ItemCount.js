@@ -1,7 +1,13 @@
+//React Imports
 import React, { useState } from "react";
+
+//Libraries Imports
 import { Button } from "@mui/material";
 
+//Styles Imports
 import "./ItemCount.css";
+
+
 
 function ItemCount({ stock, setShowButton, onAdd }) {
     const [count, setCount] = useState(1);

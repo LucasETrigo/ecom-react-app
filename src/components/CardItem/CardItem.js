@@ -1,10 +1,12 @@
+//React Imports
+import { Link } from "react-router-dom";
+
+//Libraries Imports
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
 // style
 import "./CardItem.css";
-
-import { Link } from "react-router-dom";
 
 const CardItem = ({ title, image, price, id, category }) => {
     function onAdd(count) {
