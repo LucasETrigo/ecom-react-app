@@ -1,5 +1,8 @@
-import { Add, Remove } from "@mui/icons-material";
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+
+import { Add, Remove } from "@mui/icons-material";
+
 import CartContext from "../context/CartContext";
 import { CartProvider } from "../context/CartContext";
 
@@ -42,7 +45,7 @@ const Cart = () => {
                                     <hr/>
                                 </div>
                                 <div className="cart-summary">
-                                  <button className="cart-remove-btn">Remove</button>
+                                    <button className="cart-remove-btn">Remove</button>
                                 </div>
                             </div>
                         </div>
@@ -50,12 +53,18 @@ const Cart = () => {
                 })
             }
             <div className="cart-total-container">
-              <div className="span-total-cart">
-                  <span>TOTAL: </span>
-              </div>
-              <div className="btn-clear-cart">
-                  <button className="cart-clear-btn">Clear All</button>
-              </div>
+                <div className="span-total-cart">
+                    <span>TOTAL: </span>
+                    <div className="continue-shopping">
+                        <button className="cart-check-btn"><Link to={"/category"}>Continue Shopping</Link></button>
+                    </div>
+                </div>
+                <div className="btn-clear-cart">
+                    <button className="cart-clear-btn">Clear All</button>
+                </div>
+                <div className="btn-checkout-cart">
+                    <button className="cart-check-btn">Go to Checkout</button>
+                </div>
             </div>
         </div>
     );

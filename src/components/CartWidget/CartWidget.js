@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { useContext } from "react";
+
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import CartContext from "../../context/CartContext";
@@ -17,7 +19,9 @@ const CartWidget = () => {
     return (
         <div>
             <div className="itemsInCart">{itemsInCart}</div>
-            <ShoppingCartIcon className="cart-icon" />
+            <Link to={'/cart'}>
+                <ShoppingCartIcon className="cart-icon"/>
+            </Link>
         </div>
     );
 };
