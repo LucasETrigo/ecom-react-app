@@ -26,7 +26,7 @@ const CardDetail = ({ data, item }) => {
             </div>
             <div className="title-detail">
                 <h2 className="tit">{data.title}</h2>
-                <p className="prc">{data.price}</p>
+                <p className="prc">${data.price}</p>
             </div>
             <div className="count-detail">
                 {!showButton ? (

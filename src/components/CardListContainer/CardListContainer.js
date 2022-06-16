@@ -19,18 +19,6 @@ const CardListContainer = () => {
     const { idCategory } = useParams();
 
 
-    /*  COMMENTED BECAUSE ON CARDDETAIL IS CAUSING ISSUE
-    const getProductoss = async () => {
-        const productSnapshot = await getDocs(collection(db, "products"));
-        const productList = productSnapshot.docs.map((doc) => {
-            let product = doc.data()
-            product.id = doc.id
-            return product
-        })
-        return productList
-    }
-    */
-
     const getProducts = () => {
         setSpinner(true);
         return new Promise((resolve, reject) => {
@@ -42,10 +30,8 @@ const CardListContainer = () => {
     
 
     useEffect(() => {
-        //getProductoss()
         getProducts()
             .then((response) => {
-                console.log("productos", response)
                 setSpinner(false);
                 setProducts(
                     idCategory
@@ -84,3 +70,24 @@ const CardListContainer = () => {
 };
 
 export default CardListContainer;
+
+
+
+
+    /*  COMMENTED BECAUSE ON CARDDETAIL IS CAUSING ISSUE
+    //Firestore
+    import { collection, getDocs } from "firebase/firestore";
+    import db from '../../utils/firebaseConfig';
+
+
+
+    const getProductoss = async () => {
+        const productSnapshot = await getDocs(collection(db, "products"));
+        const productList = productSnapshot.docs.map((doc) => {
+            let product = doc.data()
+            product.id = doc.id
+            return product
+        })
+        return productList
+    }
+    */

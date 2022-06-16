@@ -9,7 +9,8 @@ import { CartProvider } from "../context/CartContext";
 import "./Cart.css";
 
 const Cart = () => {
-    const { cartListItems, addItem } = useContext(CartContext);
+    const { cartListItems, addItem, removeItem, clearItems, getTotalPrice } = useContext(CartContext);
+
 
     return (
         <div>
@@ -45,7 +46,7 @@ const Cart = () => {
                                     <hr/>
                                 </div>
                                 <div className="cart-summary">
-                                    <button className="cart-remove-btn">Remove</button>
+                                    <button className="cart-remove-btn" onClick={() => removeItem(item.data.id)}>Remove</button>
                                 </div>
                             </div>
                         </div>
@@ -54,13 +55,13 @@ const Cart = () => {
             }
             <div className="cart-total-container">
                 <div className="span-total-cart">
-                    <span>TOTAL: </span>
+                    <span>TOTAL: ${getTotalPrice()}</span>
                     <div className="continue-shopping">
                         <button className="cart-check-btn"><Link to={"/category"}>Continue Shopping</Link></button>
                     </div>
                 </div>
                 <div className="btn-clear-cart">
-                    <button className="cart-clear-btn">Clear All</button>
+                    <button className="cart-clear-btn" onClick={clearItems}>Clear All</button>
                 </div>
                 <div className="btn-checkout-cart">
                     <button className="cart-check-btn">Go to Checkout</button>

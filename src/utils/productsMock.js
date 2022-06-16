@@ -1,7 +1,7 @@
 const productos = [
     {
         title: "221 Common",
-        price: "0.5 ETH",
+        price: 11500,
         image: "nft-1.svg",
         stock: 10,
         id: 1,
@@ -11,7 +11,7 @@ const productos = [
 
     {
         title: "666 Common",
-        price: "0.3 ETH",
+        price: 7399,
         image: "666.svg",
         stock: 10,
         id: 2,
@@ -20,7 +20,7 @@ const productos = [
     },
     {
         title: "235 Common",
-        price: "0.5 ETH",
+        price: 10200,
         image: "235.svg",
         stock: 10,
         id: 5,
@@ -29,7 +29,7 @@ const productos = [
     },
     {
         title: "199 Common",
-        price: "0.5 ETH",
+        price: 10000,
         image: "199.svg",
         stock: 10,
         id: 8,
@@ -38,7 +38,7 @@ const productos = [
     },
     {
         title: "037 Rare",
-        price: "0.8 ETH",
+        price: 23799,
         image: "037.svg",
         stock: 5,
         id: 3,
@@ -48,7 +48,7 @@ const productos = [
 
     {
         title: "133 Rare",
-        price: "0.9 ETH",
+        price: 27800,
         image: "133.svg",
         stock: 5,
         id: 4,
@@ -57,7 +57,7 @@ const productos = [
     },
     {
         title: "923 Rare",
-        price: "0.9 ETH",
+        price: 28500,
         image: "923.svg",
         stock: 5,
         id: 6,
@@ -66,7 +66,7 @@ const productos = [
     },
     {
         title: "828 Rare",
-        price: "0.8 ETH",
+        price: 50200,
         image: "828.svg",
         stock: 5,
         id: 7,
