@@ -159,3 +159,23 @@ hr {
     position: relative;
     top: 90px;
 }
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__form > div {
+    margin-bottom: 15px;
+}
+
+.contact__form button {
+    position: relative;
+    top: 10px;
+    background: black;
+    border-radius: 40px;
+    text-transform: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;cursor: pointer;
+}
