@@ -179,3 +179,16 @@ hr {
     padding: 10px 20px;
     font-size: 14px;cursor: pointer;
 }
+
+
+.succesful__button {
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 45%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+}

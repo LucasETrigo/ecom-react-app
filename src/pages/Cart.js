@@ -1,6 +1,7 @@
 //React Imports
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 //Firebase Imports
 import { addDoc, collection } from 'firebase/firestore';
@@ -43,7 +44,8 @@ const Cart = () => {
             return {
                 id: item.data.id,
                 title: item.data.title,
-                price: item.data.price
+                price: item.data.price,
+                quantity: item.quantity
             }
         }),
         total: getTotalPrice()
@@ -54,7 +56,6 @@ const Cart = () => {
     const saveData = async (newOrder) => {
         const orderFirebase = collection(db, 'orders')
         const orderDoc = await addDoc(orderFirebase, newOrder)
-        console.log("orden generada: ", orderDoc)
         setSuccess(orderDoc.id)
     }
 
@@ -72,7 +73,11 @@ const Cart = () => {
 
     /*====== SUCCESSFUL ORDER ======*/
     const [success, setSuccess] = useState()
+    const navigate = useNavigate()
 
+    const doneOrder = () => {
+        navigate('/')
+    }
 
 
 
@@ -134,9 +139,10 @@ const Cart = () => {
             </div>
             <Modal title={success ? 'Successful Order' : 'Checkout Form'} open={showModal} handleClose={() => setShowModal(false)}>
                 {success ? (
-                    <div>
-                        Your order was received, you will get your NFTS ASAP!
-                        Order Number: {success}
+                    <div className="succesful__order">
+                        <h3 className="succesful__title">Your order was received, you will get your NFTS ASAP!</h3>
+                        <span className="succesful__number"></span>Order Number: {success}
+                        <button onClick={doneOrder} className="succesful__button">Done</button>
                     </div>
                 ) : (
                     <form className="contact__form" onSubmit={handleSubmit}>
