@@ -14,6 +14,9 @@ import Modal from "../components/Modal/Modal";
 //MUI Imports
 import TextField from '@mui/material/TextField';
 
+//Validator Imports
+import validator from "validator";
+
 //Styles Imports
 import "./Cart.css";
 
@@ -62,11 +65,26 @@ const Cart = () => {
 
 
 
+
+
+    /*====== VALIDATOR ======*/
+    const [formError, setFormError] = useState('');
+
+
     /*====== SUMBMIT ALL  ======*/
     const handleSubmit = (e) => {
         e.preventDefault()
-        setOrder({...order, buyer: formValue})
-        saveData({...order, buyer: formValue})
+
+        const validateEmail = validator.isEmail(formValue.email)
+        const validateName = validator.isAlpha(formValue.name)
+        const validatePhone = validator.isNumeric(formValue.phone)
+
+        if(validateEmail && validateName && validatePhone) {
+            setOrder({...order, buyer: formValue})
+            saveData({...order, buyer: formValue})
+        } else {
+            
+        }
     }
 
 
@@ -77,6 +95,7 @@ const Cart = () => {
 
     const doneOrder = () => {
         navigate('/')
+        clearItems()
     }
 
 
@@ -146,9 +165,9 @@ const Cart = () => {
                     </div>
                 ) : (
                     <form className="contact__form" onSubmit={handleSubmit}>
-                        <TextField id="outlined-basic" name="name" label="Full Name" variant="outlined" value={formValue.name} onChange={handleChange}/>
-                        <TextField id="outlined-basic" name="phone" label="Phone Number" variant="outlined" value={formValue.phone} onChange={handleChange}/>
-                        <TextField id="outlined-basic" name="email" label="Email" variant="outlined" value={formValue.email} onChange={handleChange}/>
+                        <TextField id="outlined-basic" required="true" name="name" label="Full Name" variant="outlined" value={formValue.name} onChange={handleChange}/>
+                        <TextField id="outlined-basic" required="true" name="phone" label="Phone Number" variant="outlined" value={formValue.phone} onChange={handleChange}/>
+                        <TextField id="outlined-basic" required="true" name="email" label="Email" variant="outlined" value={formValue.email} onChange={handleChange}/>
                         <button type="submit">Finish Order</button>
                     </form>
                 )}
