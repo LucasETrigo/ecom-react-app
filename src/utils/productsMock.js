@@ -75,14 +75,5 @@ const productos = [
     },
 ];
 
-const producto1 = {
-    title: "221 Rare",
-    price: "0.8 ETH",
-    image: "nft-1.svg",
-    stock: 5,
-    id: 1,
-    initial: 1,
-};
 
 export default productos;
-export { producto1 };

@@ -41,7 +41,8 @@ npm start
 Esta es la lista de dependencias y las versiones utilizadas
 
 -   @mui/icons-material: 5.6.2
--   @mui/material": 5.7.0
+-   @mui/material: 5.7.0
 -   @mui/styled-engine-sc: 5.7.0
 -   react-router-dom@6.3.0
 -   firebase: 9.8.2
+-   validator: 13.7.0

@@ -12,7 +12,7 @@ import "./HomeBanner.css";
 
 const HomeBanner = () => {
     return (
-        <div className="container-banner">
+        <div className="container-banner" id="particles-js">
             <div className="textos">
                 <div className="textos-size">
                     <h2>Discover the most hyped</h2>
