@@ -46,3 +46,7 @@ Esta es la lista de dependencias y las versiones utilizadas
 -   react-router-dom@6.3.0
 -   firebase: 9.8.2
 -   validator: 13.7.0
+
+
+
+![GIF ANIMATION](public/Animation.gif)
