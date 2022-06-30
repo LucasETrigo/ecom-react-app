@@ -49,4 +49,10 @@ Esta es la lista de dependencias y las versiones utilizadas
 
 
 
+
+## 🔌GIF del proyecto
+
+---
+
+
 ![GIF ANIMATION](public/Animation.gif)
